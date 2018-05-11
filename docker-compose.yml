@@ -8,11 +8,11 @@ services:
   prometheus:
     image: prom/prometheus
     volumes:
-      - ./prometheus/:/etc/prometheus/
+      - ${pwd}/prometheus/:/etc/prometheus/:ro
       - prometheus_data:/prometheus
     command:
-      - '-config.file=/etc/prometheus/prometheus.yml'
-      - '-storage.local.path=/prometheus'
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
     expose:
       - 9090
     ports:
@@ -50,4 +50,4 @@ services:
       - 8080:8080
       - 8081:8081
     volumes:
-      - .:/code"
+      - .:/code

@@ -48,6 +48,25 @@
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
+        
+        <dependency>  
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_spring_boot</artifactId>
+            <version>0.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_hotspot</artifactId>
+            <version>0.4.0</version>
+        </dependency>
+
+        
+                <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_logback</artifactId>
+            <version>0.4.0</version>
+        </dependency>
 
 		<!-- test -->
 		<dependency>
